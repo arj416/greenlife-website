@@ -60,7 +60,7 @@ export default {
             },
             body: JSON.stringify({
               from: "onboarding@resend.dev",
-              to: ["shaq@greenlifeltd.com", "arj416@gmail.com"],
+              to: ["arj416@gmail.com"],
               subject: `🌿 New Lead: ${name} — ${service} (${city})`,
               html: `
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
@@ -181,7 +181,7 @@ BEHAVIOR RULES:
               },
               body: JSON.stringify({
                 from: "onboarding@resend.dev",
-                to: ["shaq@greenlifeltd.com", "arj416@gmail.com"],
+                to: ["arj416@gmail.com"],
                 subject: `💬 Chat Lead: ${leadInfo.name || "Visitor"} — ${leadInfo.service || "Property Inquiry"}`,
                 html: `
                   <div style="font-family: Arial; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #d1fae5; border-radius: 8px;">
