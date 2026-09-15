@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     })
                 });
             } catch (err) {
-                console.log("Fallback notification");
+                console.error("Lead notification failed:", err);
             }
 
             const titleColor = isDarkTheme ? "#FFFFFF" : "var(--primary-dark)";
