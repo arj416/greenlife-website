@@ -88,10 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
         chatClose.addEventListener('click', (e) => { e.stopPropagation(); toggleChat(false); });
     }
 
-    // Auto-open greeting after 5 seconds
+    // Auto-open only on desktop screens, never on mobile
     setTimeout(() => {
-        if (!isChatOpen && chatBubble) toggleChat(true);
-    }, 5000);
+        if (window.innerWidth > 800 && !isChatOpen && chatBubble) toggleChat(true);
+    }, 6000);
 
     const handleChatSubmit = async () => {
         if (!chatInput) return;
