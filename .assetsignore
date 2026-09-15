@@ -1,0 +1,11 @@
+.git
+.git/**
+scripts
+scripts/**
+cloudflare-worker
+cloudflare-worker/**
+node_modules
+node_modules/**
+wrangler.jsonc
+.gitignore
+.assetsignore
