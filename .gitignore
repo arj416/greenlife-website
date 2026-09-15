@@ -1,0 +1,5 @@
+greenlife-website/.wrangler/
+node_modules/
+*.env
+.DS_Store
+.wrangler/

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Green Life LTD — Landscaping, Hardscaping, Concrete & Snow Removal</title>
+  <meta name="description" content="Green Life LTD offers landscaping, hardscaping, concrete driveways, tree planting, and snow removal contracts in Oakville, Burlington and Mississauga GTA.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-forest) 100%);
+      padding: 9rem 0 5rem; color: #fff;
+      position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: url('images/hero-landscaping.jpg') center/cover no-repeat;
+      opacity: 0.15;
+    }
+    .page-hero .container { position: relative; z-index: 1; }
+    .page-hero h1 { color: #fff; font-size: clamp(2rem, 4.5vw, 3.2rem); margin-bottom: 1rem; }
+    .page-hero p { color: rgba(255,255,255,0.78); font-size: 1.05rem; max-width: 580px; }
+
+    .service-detail-section { padding: 5rem 0; }
+    .service-detail-section:nth-child(even) { background: var(--bg-light); }
+    .service-detail-section:nth-child(odd) { background: #fff; }
+
+    .service-detail-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+    }
+    .service-detail-grid.reverse { direction: rtl; }
+    .service-detail-grid.reverse > * { direction: ltr; }
+    @media (max-width: 860px) {
+      .service-detail-grid, .service-detail-grid.reverse { grid-template-columns: 1fr; direction: ltr; gap: 2rem; }
+    }
+
+    .service-detail-img {
+      border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: var(--shadow-lg); aspect-ratio: 4/3;
+    }
+    .service-detail-img img { width: 100%; height: 100%; object-fit: cover; }
+
+    .service-detail-content h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1rem; }
+    .service-detail-content p { color: var(--text-muted); line-height: 1.7; margin-bottom: 1.25rem; }
+
+    .service-checklist { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; margin-bottom: 1.75rem; }
+    .service-checklist li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.95rem; }
+    .service-checklist li svg { color: var(--accent-lime); flex-shrink: 0; margin-top: 2px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="Green Life LTD" class="logo-img">
+        <div class="logo-text">GREEN LIFE <span>LTD — Contracting</span></div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Get a Quote</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:6479661894" class="nav-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>(647) 966-1894</span>
+        </a>
+        <a href="contact.html" class="btn-primary">Free Quote</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Get a Quote</a>
+    <a href="tel:6479661894" style="color: var(--accent-lime); font-weight: 700;">📞 Call Shaq: (647) 966-1894</a>
+  </div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="section-tag" style="background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.85); border-color: rgba(255,255,255,0.2);">Our Services</div>
+        <h1>Complete Property Care,<br>Every Season</h1>
+        <p>From lush summer landscaping to zero-tolerance winter snow removal — Green Life LTD handles everything your property needs across Oakville, Burlington and Mississauga.</p>
+      </div>
+    </section>
+
+    <!-- LANDSCAPING -->
+    <section class="service-detail-section" id="landscaping">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div class="service-detail-img">
+            <img src="images/hero-landscaping.jpg" alt="Professional Landscaping Oakville">
+          </div>
+          <div class="service-detail-content">
+            <div class="section-tag">⭐ Core Specialty</div>
+            <h2>Landscaping &amp; Lawn Care</h2>
+            <p>
+              Your lawn is the first thing people see. Green Life LTD provides complete residential and commercial landscaping services designed to keep your property looking its absolute best from spring through fall.
+            </p>
+            <p>
+              Our crew works with care and precision — from clean mowing lines to perfectly edged garden beds. We service properties in Oakville, Burlington, and Mississauga on a weekly or biweekly schedule.
+            </p>
+            <ul class="service-checklist">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Weekly &amp; Biweekly Lawn Mowing</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Precise Edging &amp; Trimming</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Garden Bed Design &amp; Maintenance</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Fresh Sod Installation &amp; Grading</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Mulching &amp; Top Dressing</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Fertilization &amp; Weed Control</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Spring &amp; Fall Seasonal Cleanups</span></li>
+            </ul>
+            <a href="contact.html" class="btn-primary">Get Landscaping Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HARDSCAPING -->
+    <section class="service-detail-section" id="hardscaping">
+      <div class="container">
+        <div class="service-detail-grid reverse">
+          <div class="service-detail-img">
+            <img src="images/hardscaping-driveway.jpg" alt="Hardscaping Interlock Driveway Mississauga">
+          </div>
+          <div class="service-detail-content">
+            <div class="section-tag">Permanent Upgrades</div>
+            <h2>Hardscaping &amp; Interlocking</h2>
+            <p>
+              Transform your outdoor spaces with custom stone and paver installations built to last Ontario's freeze-thaw cycles. We design and install beautiful interlocking driveways, patios, walkways, retaining walls, and steps.
+            </p>
+            <p>
+              Every hardscaping project starts with proper excavation, geotextile fabric, and compacted aggregate base — ensuring your stones never sink or heave.
+            </p>
+            <ul class="service-checklist">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Interlocking Paver Driveways</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Backyard Patios &amp; Entertainment Areas</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Walkways, Steps &amp; Pathways</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Retaining Walls &amp; Armor Stone</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Polymeric Sand &amp; Sealing</span></li>
+            </ul>
+            <a href="contact.html" class="btn-primary">Get Hardscaping Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONCRETE -->
+    <section class="service-detail-section" id="concrete">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div class="service-detail-img">
+            <img src="images/concrete-work.jpg" alt="Concrete Driveway Oakville Burlington">
+          </div>
+          <div class="service-detail-content">
+            <div class="section-tag">Durable &amp; Beautiful</div>
+            <h2>Concrete Driveways &amp; Work</h2>
+            <p>
+              Modern concrete driveways are an investment that adds lasting value to your home. Green Life LTD installs smooth, stamped, and exposed aggregate concrete surfaces with proper rebar reinforcement for Ontario's harsh winters.
+            </p>
+            <ul class="service-checklist">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Brushed &amp; Smooth Concrete Driveways</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Stamped Decorative Concrete Patterns</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Exposed Aggregate Finish</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Sidewalks, Pads &amp; Pool Surrounds</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Rebar Reinforced for Ontario Winters</span></li>
+            </ul>
+            <a href="contact.html" class="btn-primary">Get Concrete Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TREE PLANTING -->
+    <section class="service-detail-section" id="trees">
+      <div class="container">
+        <div class="service-detail-grid reverse">
+          <div class="service-detail-img">
+            <img src="images/tree-planting.jpg" alt="Tree Planting GTA Ontario">
+          </div>
+          <div class="service-detail-content">
+            <div class="section-tag">Natural Beauty</div>
+            <h2>Tree Planting &amp; Care</h2>
+            <p>
+              Trees are a long-term investment in your property's value and beauty. Green Life LTD sources healthy, locally adapted trees and shrubs and ensures they're planted correctly with proper soil amendment, staking, and aftercare.
+            </p>
+            <ul class="service-checklist">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Shade &amp; Ornamental Tree Planting</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Shrub &amp; Hedge Planting</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Pruning &amp; Shaping</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Tree &amp; Stump Removal</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Soil Amendment &amp; Aftercare</span></li>
+            </ul>
+            <a href="contact.html" class="btn-primary">Get Tree Planting Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SNOW REMOVAL -->
+    <section class="service-detail-section" id="snow">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div class="service-detail-img">
+            <img src="images/snow-removal.jpg" alt="Snow Removal Contract Oakville Burlington Mississauga">
+          </div>
+          <div class="service-detail-content">
+            <div class="section-tag">❄️ Year-Round Contracts</div>
+            <h2>Snow Removal &amp; Winter Contracts</h2>
+            <p>
+              Ontario winters are unpredictable. Our 24/7 residential and commercial snow removal service ensures your driveway, walkways, and pathways are always clear — no matter what Mother Nature throws at us.
+            </p>
+            <p>
+              Sign a seasonal snow contract and enjoy flat-rate pricing, priority response, and complete peace of mind all winter long.
+            </p>
+            <ul class="service-checklist">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>24/7 Storm Response (November–April)</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Driveway &amp; Walkway Plowing</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Salt &amp; Ice Control Application</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Commercial Parking Lot Clearing</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Seasonal Flat-Rate Contracts</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Year-Round Combo (Summer + Winter)</span></li>
+            </ul>
+            <a href="contact.html" class="btn-primary">Sign Up for Snow Contract</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section style="padding: 5rem 0; background: linear-gradient(135deg, var(--primary-forest), var(--green-mid)); color: #fff; text-align: center;">
+      <div class="container">
+        <h2 style="color: #fff; font-size: 2.2rem; margin-bottom: 1rem;">Ready to Transform Your Property?</h2>
+        <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem; max-width: 520px; margin-left: auto; margin-right: auto;">Call Shaq directly or submit a quote request and we'll get back to you within 2 hours.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="tel:6479661894" class="btn-primary" style="background: #fff; color: var(--primary-forest);">📞 Call (647) 966-1894</a>
+          <a href="contact.html" class="btn-secondary">Get Free Quote Online</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="text-align: center; padding: 2rem 0;">
+        <img src="logo.png" alt="Green Life LTD" style="height: 50px; margin: 0 auto 1rem;">
+        <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">&copy; 2026 Green Life LTD. Oakville, Burlington &amp; Mississauga, Ontario.</p>
+        <div style="margin-top: 0.75rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+          <a href="index.html" style="color: var(--accent-lime); font-size: 0.85rem;">Home</a>
+          <a href="portfolio.html" style="color: var(--accent-lime); font-size: 0.85rem;">Portfolio</a>
+          <a href="contact.html" style="color: var(--accent-lime); font-size: 0.85rem;">Contact</a>
+          <a href="tel:6479661894" style="color: var(--accent-lime); font-size: 0.85rem;">(647) 966-1894</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-action-dock">
+    <a href="tel:6479661894" class="dock-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span>Call</span></a>
+    <a href="sms:6479661894" class="dock-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg><span>SMS</span></a>
+    <a href="mailto:shaq@greenlifeltd.com" class="dock-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><span>Email</span></a>
+    <a href="https://wa.me/16479661894" class="dock-item" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg><span>WhatsApp</span></a>
+    <a href="https://www.instagram.com/green.life_contractingltd" class="dock-item" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg><span>Instagram</span></a>
+  </div>
+
+  <div class="chat-widget-container">
+    <div class="chat-bubble" id="chat-bubble">
+      <div class="chat-header">
+        <div class="chat-header-title">
+          <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#10B981;"></span>
+          <span>Shaq &bull; Green Life LTD</span>
+        </div>
+        <button class="chat-close-btn" id="chat-close" aria-label="Close Chat">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="chat-text" id="chat-text">
+        <div style="background: var(--green-pale); padding: 0.5rem 0.75rem; border-radius: 12px; margin-bottom: 0.5rem; font-size: 0.85rem; border: 1px solid rgba(26,92,42,0.12);">
+          Hi! I'm <strong>Shaq</strong> 🌿 Ask me about any of our services or get a quick quote!
+        </div>
+      </div>
+      <div class="chat-input-wrapper">
+        <input type="text" id="chat-input" placeholder="Ask Shaq..." aria-label="Chat query">
+        <button id="chat-send" class="chat-send-btn" aria-label="Send">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+      </div>
+    </div>
+    <div class="avatar-wrapper" id="avatar-wrapper" title="Chat with Shaq" role="button" tabindex="0">
+      <svg viewBox="0 0 100 100" width="56" height="56">
+        <circle cx="50" cy="50" r="48" fill="#1A5C2A"/>
+        <path d="M 50 78 Q 22 55 30 28 Q 45 12 70 22 Q 80 40 68 60 Q 60 72 50 78 Z" fill="#5CB85C"/>
+        <path d="M 50 78 L 50 40" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+      </svg>
+      <div class="avatar-badge" title="Online"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
