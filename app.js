@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     if (header) {
         window.addEventListener('scroll', () => {
-            header.style.boxShadow = window.scrollY > 20 ? '0 4px 20px rgba(0,0,0,0.3)' : 'none';
+            header.style.boxShadow = window.scrollY > 20 ? '0 6px 22px rgba(15, 34, 24, 0.12)' : '0 2px 14px rgba(15, 34, 24, 0.06)';
         }, { passive: true });
     }
 });
