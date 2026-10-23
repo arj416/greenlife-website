@@ -1,5 +1,7 @@
 .git
 .git/**
+.wrangler
+.wrangler/**
 scripts
 scripts/**
 cloudflare-worker
